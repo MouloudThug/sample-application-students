@@ -5,4 +5,4 @@ script:
  - docker build -t alex/http ./sample-application-http-api-server
  - docker login -u $usr -p $pwd
  - docker push alex/changelog
- - docker puch alex/http
+ - docker push alex/http

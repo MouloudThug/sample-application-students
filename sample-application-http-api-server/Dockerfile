@@ -1,3 +1,3 @@
-FROM openjre:11-slim
+FROM openjdk:11-jre-slim
 COPY target/*-exec.jar /app.jar
 ENTRYPOINT java -jar /app.jar
