@@ -1,2 +1,6 @@
 language: java
-scrit: mvn clean verify
+services: docker
+script: 
+	- mvn clean verify
+	- docker build -t alex/changelog ./sample-application-db-changelog-job
+	- docker build -t alex/http ./sample-application-http-api-server
