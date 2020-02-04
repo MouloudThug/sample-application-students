@@ -1,6 +1,11 @@
 language: java
+addons:
+ sonarcloud:
+  organization: "mouloudthug"
+  token:
+    secure: $sonarKey # encrypted value of your token
 script: 
- - mvn clean verify
+ - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=MouloudThug_sample-application-students
  - docker build -t azukyx/changelog ./sample-application-db-changelog-job
  - docker build -t azukyx/http ./sample-application-http-api-server
  - docker login -u $usr -p $pwd
