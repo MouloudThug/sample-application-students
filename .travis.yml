@@ -4,5 +4,5 @@ script:
  - docker build -t alex/changelog ./sample-application-db-changelog-job
  - docker build -t alex/http ./sample-application-http-api-server
  - docker login -u $usr -p $pwd
- - docker push alex/changelog
- - docker push alex/http
+ - docker push azukyx/http:alex/http
+ - docker push azukyx/changelog:alex/changelog
